@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Low-light Video Enhancement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+            margin-top: 50px;
+            font-weight: bold;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        table {
+            margin: 0 auto;
+            margin-top: 50px;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        td {
+            width: 50%;
+            padding: 20px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        video {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .caption {
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 28px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+
+            table {
+                margin-top: 30px;
+            }
+
+            td {
+                padding: 10px;
+            }
+
+            .caption {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Low-light Video Enhancement Service</h1>
+        <table>
+            <tr>
+                <td>
+                    <video width="100%" controls autoplay muted>
+                        <source src="{{ url_for('static', filename=output_video_filename)|safe }}" type="video/mp4">
+                    </video>
+                    <p class="caption">Output Video</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

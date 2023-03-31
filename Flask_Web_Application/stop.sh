@@ -1,0 +1,1 @@
+docker stop low_light_enhancement_application && docker rm low_light_enhancement_application

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Low-light Enhancement Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background-color: #f8f9fa;
+            font-size: 26px;
+            font-weight: bold;
+            border-bottom: none;
+            padding: 30px;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .file-input {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 0;
+        }
+
+        .file-input input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .file-input .btn {
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .file-input .btn:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            .card-header {
+                font-size: 22px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="text-center mb-0" style="font-size: 24px;">Please Upload a Video
+                </h1>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="file-input">
+                                <input type="file" id="file" name="file">
+                                <label for="file" class="btn btn-lg ml-5"><i class="fa fa-upload"></i>Select
+                                    File</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg mr-5">Upload</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Low-light Enhancement</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url("https://artandcreativity.com/wp-content/uploads/2019/09/japan-2014619_1920.jpg");
+      background-size: cover;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body::before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      backdrop-filter: blur(5px);
+    }
+
+    a {
+      display: block;
+      width: 50%;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      background-color: #0c0c0d;
+      color: white;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #580101;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 1.5em;
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Low-Light Enhancement</h1>
+  <p>Transform dark and poorly lit photos and videos into natural lighting ones.</p>
+  <a href="/process_photo/">Low-Light Image Enhancement</a>
+  <a href="/process_video/">Low-Light Video Enhancement</a>
+
+</body>
+
+</html>

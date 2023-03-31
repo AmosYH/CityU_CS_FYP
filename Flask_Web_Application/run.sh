@@ -1,0 +1,1 @@
+docker run --gpus all -v $(pwd)/media:/project/static/media -p 8080:8080 --env-file .env -dit --name low_light_enhancement_application low_light_enhancement

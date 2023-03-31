@@ -1,0 +1,1 @@
+Processed image/video will appear in this folder.
