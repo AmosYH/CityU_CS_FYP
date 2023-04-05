@@ -118,7 +118,7 @@ def load_facedetector(network='resnet50', trained_model='./weights/Resnet50_Fina
     facedetector = facedetector.to(device)
     return device, facedetector, cfg
 
-def detect_faces(source_img, device, facedetector, cfg, confidence_threshold=0.02, top_k=5000, nms_threshold=0.4, keep_top_k=750):
+def detect_faces(source_img, device, facedetector, cfg, confidence_threshold=0.7, top_k=5000, nms_threshold=0.4, keep_top_k=750):
     img = np.float32(source_img)
 
     resize = 1
