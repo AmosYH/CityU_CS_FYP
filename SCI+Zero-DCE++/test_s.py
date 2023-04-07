@@ -12,7 +12,7 @@ from model import Finetunemodel
 from multi_read_data import MemoryFriendlyLoader
 
 parser = argparse.ArgumentParser("SCI")
-parser.add_argument('--data_path', type=str, default='./data/result_Zero_DCE++/VE-LOL',
+parser.add_argument('--data_path', type=str, default='./data/result_Zero_DCE++/track1.2_test_sample',
                     help='location of the data corpus')
 parser.add_argument('--save_path', type=str, default='./results', help='location of the data corpus')
 parser.add_argument('--model', type=str, default='./EXP/weights_9.pt', help='location of the data corpus')

@@ -10,13 +10,18 @@ import torch
 from basicsr.models import create_model
 from basicsr.train import parse_options
 from basicsr.utils import FileClient, imfrombytes, img2tensor, padding
+import yaml
 
-# from basicsr.utils import (get_env_info, get_root_logger, get_time_str,
-#                            make_exp_dirs)
-# from basicsr.utils.options import dict2str
+def read_and_modify_one_block_of_yaml_data(filename, key, value):
+    with open(f'{filename}.yml', 'r') as f:
+        data = yaml.safe_load(f)
+        data['img_path'][f'{key}'] = f'{value}' 
+    with open(f'{filename}.yml', 'w') as f:
+        yaml.dump(data, f, sort_keys=False)
 
-def main():
-    # parse options, set distributed setting, set ramdom seed
+
+for i in range(0, 100):
+
     opt = parse_options(is_train=False)
 
     img_path = opt['img_path'].get('input_img')
@@ -42,6 +47,5 @@ def main():
 
     print('inference {} .. finished.'.format(img_path))
 
-if __name__ == '__main__':
-    main()
-
+    read_and_modify_one_block_of_yaml_data('options/demo/demo', key='input_img', value='./demo/DCE+++SCI/' + str(i + 1) + '.png')
+    read_and_modify_one_block_of_yaml_data('options/demo/demo', key='output_img', value='./demo/Denoised/' + str(i + 1) + '.png')
