@@ -1,5 +1,3 @@
-# CityU_CS_FYP
-
 # Low Light Image Enhancement and Restoration for Face Detection Using Fusion of Multiple Algorithms
 
 ## Low Light Enhancement and Face Detection Flask Web Application
